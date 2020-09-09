@@ -1,0 +1,26 @@
+<%- include('./partials/_head')%>
+<main id="new">
+    <h2>ADD NEW ARTICLE</h2>
+    <form action="/newPost" method="POST">
+        <input type="text" name="title" id="" placeholder="Title">
+        <input type="text" name="url" id="" placeholder="Url Picture">
+        <input type="text" name="author" id="" placeholder="Author">
+        <input type="text" name="author_bild" id="" placeholder="Author Picture">
+        <textarea name="body" id="" cols="30" rows="10" placeholder="Write your article here....."></textarea>
+        <input type="submit" value="SEND ARTICLE">
+    </form>
+    <section class="eye">
+        <img src="/eye.svg" alt="">
+        <h3>What to read next</h3>
+    </section>
+    <section class="three">
+        <% blogdata.forEach(elt=>{ %>
+        <article>
+            <a href="/article/<%= elt.id %> "></a>
+            <img src="<%= elt.url %> " alt="">
+            <h2><%= elt.title %> </h2>
+        </article>
+        <% }) %>
+    </section>
+</main>
+<%- include('./partials/_foot')%>

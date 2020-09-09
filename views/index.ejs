@@ -1,0 +1,11 @@
+<%- include('./partials/_head')%>
+<main id="index">
+    <% blogdata.forEach(elt=>{ %>
+        <article>
+            <a href="/article/<%= elt.id %> "></a>
+            <img src="<%= elt.url %> " alt="">
+            <h2><%= elt.title %> </h2>
+        </article>
+    <% }) %> 
+</main>
+<%- include('./partials/_foot')%>

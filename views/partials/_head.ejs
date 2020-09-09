@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title><%=title%></title>
+</head>
+
+<body>
+    <header>
+        <a href="/"><img src="/logo.svg" alt="NORDIC ROSE"></a>
+        <nav>
+            <ul>
+                <% if(active=="article"){ %>
+                <li><a href="/article/0" class="active">BLOG</a></li>
+                <% } else { %>
+                <li><a href="/" <%if(active=="index"){%>class="active" <%}%>>ALL</a></li>
+                <% } %> <li><a href="/new" <%if(active=="new"){%>class="active" <%}%>>NEW ARTICLE</a></li>
+            </ul>
+        </nav>
+    </header>

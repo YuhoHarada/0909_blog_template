@@ -1,0 +1,34 @@
+<%- include('./partials/_head')%>
+<main id="article">
+    <h2><%= blogdata[id].title %></h2>
+    <img src="<%= blogdata[id].url %> " alt="">
+    <section id="content">
+        <div class="autor">
+            <img src="<%= blogdata[id].author_bild %>" alt="">
+            <div>
+                <h3><%= blogdata[id].author %></h3>
+                <p><%= blogdata[id].published_at %> / <%= blogdata[id].duration %> min read</p>
+            </div>
+            <a href="#"><img src="/twitter.svg" alt=""></a>
+        </div>
+        <p>
+            <%= blogdata[id].body %>
+        </p>
+    </section>
+    <section class="eye">
+        <img src="/eye.svg" alt="">
+        <h3>What to read next</h3>
+    </section>
+    <section class="three">
+        <% blogdata.forEach(elt=>{ %>
+        <% if(elt.id!=id){ %>
+        <article>
+            <a href="/article/<%= elt.id %> "></a>
+            <img src="<%= elt.url %> " alt="">
+            <h2><%= elt.title %> </h2>
+        </article>
+        <% } %>
+        <% }) %>
+    </section>
+</main>
+<%- include('./partials/_foot')%>

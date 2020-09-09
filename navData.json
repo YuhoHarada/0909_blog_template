@@ -1,0 +1,23 @@
+[
+    {
+        "name": "index",
+        "url": "/",
+        "data": {
+            "active": "index"
+        }
+    },
+    {
+        "name": "new_article",
+        "url": "/new",
+        "data": {
+            "active": "new"
+        }
+    },
+    {
+        "name": "article",
+        "url": "/article/:id",
+        "data": {
+            "active": "article"
+        }
+    }
+]
