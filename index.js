@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const fs = require("fs")
 const bodyParser = require('body-parser')
+const PORT = process.env.PORT||3002
 
 const navData = require('./navData.json')
 const blogData = require('./blogData.json')
@@ -12,7 +13,7 @@ app.use(express.static('public'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
-app.listen(3002, () => {
+app.listen(PORT, () => {
     console.log('server listening at 3002')
 })
 
