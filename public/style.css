@@ -227,7 +227,7 @@ footer .copy{
 
 /* ************************ article ************************ */
 #article>h2{
-    width: 60%;
+    max-width: 850px;
     margin: 50px auto;
     text-align: center;
     font-size: 3em;
@@ -259,4 +259,64 @@ footer .copy{
 }
 #article #content .autor a img{
     width: 30px;
+}
+
+
+/* ************************ media query ************************ */
+@media screen and (max-width: 1023px) {
+    header nav{
+        position: fixed;
+        top: 0;
+        right: -305px;
+        z-index: 9999999;
+        background: #00000099;
+        height: 100vh;
+        width: 300px;
+        transition: .5s;
+    }
+    header ul{
+        position: absolute;
+        top: 0;
+        right: 0;
+        flex-flow: column;
+        width: 300px;
+        height: 100vh;
+        background: #E5E5E5;
+    }
+    header ul li{
+        margin: 10vh 0;
+    }
+    header ul li a.active:before{
+        bottom: -5px;
+    }
+    #index{
+        display: block;
+        width: 100%;
+    }
+    #index article:first-of-type h2::after{
+        width: 100%;
+    }
+    .three{
+        display: block;
+        margin: 0;
+    }
+}
+@media screen and (max-width: 767px) {
+    #index article:first-of-type h2{
+        font-size: 2em;
+    }
+    #article #content{
+        width: 94%;
+    }
+    #article>h2{
+        font-size: 2em;
+    }
+}
+@media screen and (max-width: 480px) {
+    header img{
+        width: 70%;
+    }
+    .eye h3{
+        font-size: 2em;
+    }
 }
