@@ -18,14 +18,20 @@
         <h3>What to read next</h3>
     </section>
     <section class="three">
-        <% blogdata.forEach(elt=>{ %>
-        <% if(elt.id!=id){ %>
+        <% let randomNum = [] %> 
+        <% for(let i = 0 ; i < 6 ; i++){ %>
+            <% let random1 %> 
+            <% do { %>
+                <% random1 = Math.floor(Math.random() * blogdata.length) %> 
+            <% } while(randomNum.includes(random1)) %>
+            <% randomNum.push(random1) %> 
+        <% } %> 
+        <% randomNum.forEach(elt=>{ %>
         <article>
-            <a href="/article/<%= elt.id %> "></a>
-            <img src="<%= elt.url %> " alt="">
-            <h2><%= elt.title %> </h2>
+            <a href="/article/<%= blogdata[elt].id %> "></a>
+            <img src="<%= blogdata[elt].url %> " alt="">
+            <h2><%= blogdata[elt].title %> </h2>
         </article>
-        <% } %>
         <% }) %>
     </section>
 </main>
