@@ -260,6 +260,9 @@ footer .copy{
 #article #content .autor a img{
     width: 30px;
 }
+#article #content p{
+    white-space: pre-wrap;
+}
 
 
 /* ************************ media query ************************ */
