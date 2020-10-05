@@ -64,3 +64,4 @@ app.post('/newPost', (req, res) => {
 app.use((req, res) => {
     res.render('404', { title: '404', active: "404" })
 })
+
